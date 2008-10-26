@@ -1,0 +1,14 @@
+!bop-urules.xfst
+
+define AS [«Aor»|«Pass»|«VSubst»];
+define NPS [«Imp»|«NPast»|«Imper»|«Ger»];
+
+define M [AS|NPS|
+	«Pref»|«Trunc»|«Part»|
+	«1P»|«2P»|«3P»|«Sg»|«Pl»|«m»|«f»|«n»|
+	«VS»|«CS»|
+	«Exc1»|«Exc2»|«Exc3»|«Exc4»|«Exc5»];
+
+define C [b|v|g|d|ž|z|j|k|l|m|n|p|r|s|t|f|x|c|č|š];
+
+define ustress [a -> á, o -> ó, u -> ú, e -> é, i -> í, y -> ý || ´  _, _ ´ C,, ´ -> [] || _ \M+];

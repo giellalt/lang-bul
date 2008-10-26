@@ -1,0 +1,611 @@
+!bop-bg.rev.lexc
+
+Definitions
+	v	= "@D.SecPrefix@" "@R.Prefix.v@";
+	vyz	= "@D.SecPrefix@" "@R.Prefix.vyz@";
+	do	= "@D.SecPrefix@" "@R.Prefix.do@";
+	za	= "@D.SecPrefix@" "@R.Prefix.za@";
+	iz	= "@D.SecPrefix@" "@R.Prefix.iz@";
+	na	= "@D.SecPrefix@" "@R.Prefix.na@";
+	nad	= "@D.SecPrefix@" "@R.Prefix.nad@";
+	o	= "@D.SecPrefix@" "@R.Prefix.o@";
+	ob	= "@D.SecPrefix@" "@R.Prefix.ob@";
+	ot	= "@D.SecPrefix@" "@R.Prefix.ot@";
+	po	= "@D.SecPrefix@" "@R.Prefix.po@";
+	pod	= "@D.SecPrefix@" "@R.Prefix.pod@";
+	pre	= "@D.SecPrefix@" "@R.Prefix.pre@";
+	pred	= "@D.SecPrefix@" "@R.Prefix.pred@";
+	pri	= "@D.SecPrefix@" "@R.Prefix.pri@";
+	pro	= "@D.SecPrefix@" "@R.Prefix.pro@";
+	raz	= "@D.SecPrefix@" "@R.Prefix.raz@";
+	s	= "@D.SecPrefix@" "@R.Prefix.s@";
+	sy	= "@D.SecPrefix@" "@R.Prefix.sy@";
+	u	= "@D.SecPrefix@" "@R.Prefix.u@";
+	fv	= "@R.Prefix.v@";
+	fvyz	= "@R.Prefix.vyz@";
+	fdo	= "@R.Prefix.do@";
+	fza	= "@R.Prefix.za@";
+	fiz	= "@R.Prefix.iz@";
+	fna	= "@R.Prefix.na@";
+	fnad	= "@R.Prefix.nad@";
+	fo	= "@R.Prefix.o@";
+	fob	= "@R.Prefix.ob@";
+	fot	= "@R.Prefix.ot@";
+	fpo	= "@R.Prefix.po@";
+	fpod	= "@R.Prefix.pod@";
+	fpre	= "@R.Prefix.pre@";
+	fpred	= "@R.Prefix.pred@";
+	fpri	= "@R.Prefix.pri@";
+	fpro	= "@R.Prefix.pro@";
+	fraz	= "@R.Prefix.raz@";
+	fs	= "@R.Prefix.s@";
+	fsy	= "@R.Prefix.sy@";
+	fu	= "@R.Prefix.u@";
+	sv	= "@R.SecPrefix.v@";
+	svyz	= "@R.SecPrefix.vyz@";
+	sdo	= "@R.SecPrefix.do@";
+	sza	= "@R.SecPrefix.za@";
+	siz	= "@R.SecPrefix.iz@";
+	sna	= "@R.SecPrefix.na@";
+	snad	= "@R.SecPrefix.nad@";
+	so	= "@R.SecPrefix.o@";
+	sob	= "@R.SecPrefix.ob@";
+	sopo	= "@R.SecPrefix.opo@";
+	sot	= "@R.SecPrefix.ot@";
+	spo	= "@R.SecPrefix.po@";
+	spod	= "@R.SecPrefix.pod@";
+	sporaz	= "@R.SecPrefix.poraz@";
+	spre	= "@R.SecPrefix.pre@";
+	spred	= "@R.SecPrefix.pred@";
+	spri	= "@R.SecPrefix.pri@";
+	spro	= "@R.SecPrefix.pro@";
+	sraz	= "@R.SecPrefix.raz@";
+	ss	= "@R.SecPrefix.s@";
+	ssy	= "@R.SecPrefix.sy@";
+	su	= "@R.SecPrefix.u@";
+	sus	= "@R.SecPrefix.us@";
+
+	dp	= "@D.Prefix@";
+
+	paimp	= "@P.Asp.Imp@";
+	naimp	= "@N.Asp.Imp@";
+	raimp	= "@R.Asp.Imp@";
+
+	pto	= "@P.Trans.ON@";
+	nto	= "@N.Trans.ON@";
+	rto	= "@R.Trans.ON@";
+
+LEXICON Root
+<0:«Pref»>			Prefixes;
+				StemTypes;
+
+LEXICON Prefixes
+<в "@P.Prefix.v@">		SecPrefixes;
+<{въз} "@P.Prefix.vyz@">	SecPrefixes;
+<{до} "@P.Prefix.do@">		SecPrefixes;
+<{за} "@P.Prefix.za@">		SecPrefixes;
+<{из} "@P.Prefix.iz@">		SecPrefixes;
+<{на} "@P.Prefix.na@">		SecPrefixes;
+<{над} "@P.Prefix.nad@">	SecPrefixes;
+<о "@P.Prefix.o@">		SecPrefixes;
+<{об} "@P.Prefix.ob@">		SecPrefixes;
+<{от} "@P.Prefix.ot@">		SecPrefixes;
+<{по} "@P.Prefix.po@">		SecPrefixes;
+<{под} "@P.Prefix.pod@">	SecPrefixes;
+<{пре} "@P.Prefix.pre@">	SecPrefixes;
+<{пред} "@P.Prefix.pred@">	SecPrefixes;
+<{при} "@P.Prefix.pri@">	SecPrefixes;
+<{про} "@P.Prefix.pro@">	SecPrefixes;
+<{раз} "@P.Prefix.raz@">	SecPrefixes;
+<с "@P.Prefix.s@">		SecPrefixes;
+<{съ} "@P.Prefix.sy@">		SecPrefixes;
+<у "@P.Prefix.u@">		SecPrefixes;
+
+LEXICON SecPrefixes
+<в "@P.SecPrefix.v@">		Stems;
+<{въз} "@P.SecPrefix.vyz@">	Stems;
+<{до} "@P.SecPrefix.do@">	Stems;
+<{за} "@P.SecPrefix.za@">	Stems;
+<{из} "@P.SecPrefix.iz@">	Stems;
+<{на} "@P.SecPrefix.na@">	Stems;
+<{над} "@P.SecPrefix.nad@">	Stems;
+<о "@P.SecPrefix.o@">		Stems;
+<{об} "@P.SecPrefix.ob@">	Stems;
+<{опо} "@P.SecPrefix.opo@">	Stems;
+<{от} "@P.SecPrefix.ot@">	Stems;
+<{по} "@P.SecPrefix.po@">	Stems;
+<{под} "@P.SecPrefix.pod@">	Stems;
+<{пораз} "@P.SecPrefix.poraz@">	Stems;
+<{пре} "@P.SecPrefix.pre@">	Stems;
+<{пред} "@P.SecPrefix.pred@">	Stems;
+<{при} "@P.SecPrefix.pri@">	Stems;
+<{про} "@P.SecPrefix.pro@">	Stems;
+<{раз} "@P.SecPrefix.raz@">	Stems;
+<с "@P.SecPrefix.s@">		Stems;
+<{съ} "@P.SecPrefix.sy@">	Stems;
+<у "@P.SecPrefix.u@">		Stems;
+<{ус} "@P.SecPrefix.us@">	Stems;
+				Stems;
+
+LEXICON Stems
+0:÷				StemTypes;
+
+LEXICON StemTypes
+<nto naimp>			NTPfStems;
+<nto paimp>			NTImpStems;
+<pto naimp>			TPfStems;
+<pto paimp>			TImpStems;
+<nto>				NTDerStems;
+<pto>				TDerStems;
+
+LEXICON NTPfStems
+<{блј´еја} 0:[«Trunc» «VS»] [za|iz]>										Des;		!-bljéja- -> bleat (variant)
+<{буј´ај} 0:[«Trunc» «CS»] po>											Des;		!-bujáj- -> become boisterous
+<{д´еја} 0:[«Trunc» «VS»] do>											Des;		!-déja- -> bore
+<{кл´еја} 0:[«Trunc» «VS»] v>											Des;		!-kléja- -> clog
+<{лј´ез} 0:«CS» [v|za|iz|fna sv|fpro siz]>									Des;		!-ljéz- -> go
+<{пърполј´и} 0:[«Trunc» «VS»] za>										Des;		!-pyrpoljí- -> flutter (variant)
+<{ујд´иса} 0:[(«Trunc») «VS»] dp>										Des;		!ujdísa- -> fit
+<{щј´а} 0:[«Trunc» «VS»] dp>											Des;		!štjá- -> want (auxiliary)
+
+LEXICON NTImpStems
+<{б´аја} 0:[«Trunc» «VS»] [[[[o pto]|po]naimp]|dp]>								Des;		!bája- -> charm
+<{ба´уча} 0:[«Trunc» «VS»] dp>											Des;		!baúča- -> bark
+<{бдј´е} 0:[«Trunc» «VS»] dp>											Des;		!bdjé- -> be awake
+<({благо}){ух´ај} 0:[«Trunc» «CS»] dp>										Des;		!(blago)uxáj- -> smell sweet
+<{блестј´е} 0:[«Trunc» «VS»] [[za naimp]|dp]>									Des;		!blestjé- -> shine
+<{блј´еј} 0:[«Trunc» «CS»] [[[za|iz]naimp]|dp]>									Des;		!bljéj- -> bleat
+<{блужд´ај} 0:[«Trunc» «CS»] dp>										Des;		!bluždáj- -> wander
+<{боз´ај} 0:[«Trunc» «CS»] [[na naimp]|dp]>									Des;		!bozáj- -> suck
+<{болј´е} 0:[«Trunc» «VS»] [[[za|ot|po|fpo sna|fpo spri|pre|pri|raz]naimp]|dp]>					Des;		!boljé- -> hurt
+<{бој´а} 0:[«Trunc» «VS»] [[po naimp]|dp]>									Des;		!bojá- -> fear
+<{бръмч´а} 0:[«Trunc» «VS»] [[[za|iz|po]naimp]|dp]>								Des;		!brymčá- -> buzz
+<{бумтј´е} 0:[«Trunc» «VS»] [[[za|iz|po|pro|raz]naimp]|dp]>							Des;		!bumtjé- -> roar
+<{бухтј´е} 0:[«Trunc» «VS»] [[iz naimp]|dp]>									Des;		!buxtjé- -> thunder
+<{буч´а} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>									Des;		!bučá- -> rumble
+<{б´ъбла} 0:[«Trunc» «VS»] dp>											Des;		!býbla- -> gurgle
+<{б´ъбра} 0:[«Trunc» «VS»] [[[iz|na|po|raz]naimp]|dp]>								Des;		!býbra- -> chatter
+<{б´ъд} 0:«CS» dp>												Des;		!býd- -> be
+
+<{валј´е} 0:[«Trunc» «VS»] [[[iz|na|fpo sna|fpo spre|[[za|po|pre]0:«Exc3» pto]]naimp]|dp]>			Des;		!valjé- -> rain
+<{висј´е} 0:[«Trunc» «VS»] [[[iz|na|po]naimp]|dp]>								Des;		!visjé- -> hang
+<{влиј´ај} 0:[«Trunc» «CS»] [[po pto naimp]|dp]>								Des;		!vlijáj- -> influence
+<{вонј´е} 0:[«Trunc» «VS»] [[[v|za|raz|u]naimp]|dp]>								Des;		!vonjé- -> stench
+<{врещј´е} 0:[«Trunc» «VS»] [[[za|iz|po]naimp]|dp]>								Des;		!vreštjé- -> bleat
+<{врј´е} 0:[«Trunc» «VS»] [[[vyz|za|iz|na|po|pre|raz|u]naimp]|dp]>						Des;		!vrjé- -> boil
+<{вървј´е} 0:[«Trunc» «VS»] [[[[[iz|nad]pto]|po|pro]naimp]|dp]>							Des;		!vyrvjé- -> walk
+
+<{гад´ај} 0:[«Trunc» «CS»] [[[ot|raz]pto naimp]|dp]>								Des;		!gadáj- -> divine
+<{гнетј´е} 0:[«Trunc» «VS»] [[[na|u]0:«Exc3» pto naimp]|dp]>							Des;		!gnetjé- -> oppress
+<{гн´иј} 0:[«Trunc» «CS»] [[[za|iz|pro|u]naimp]|dp]>								Des;		!gníj- -> rot
+<{гов´орји} 0:[«Trunc» «VS»] [[[[[do|iz|pre|s|u]pto]|za|na|ot|po|pro|raz]naimp]|dp]>				Des;		!govórji- -> speak
+<{горч´а} 0:[«Trunc» «VS»] [[na naimp]|dp]>									Des;		!gorčá- -> taste bitter
+<{греб´а} 0:[«Trunc» «VS» «Exc4»] [[[[[za|iz|na|po]pto]|o|fpo sna]naimp]|dp]>					Des;		!grebá- -> scoop
+<{грухтј´е} 0:[«Trunc» «VS»] [[[za|iz|po]naimp]|dp]>								Des;		!gruxtjé- -> grunt
+<{гулј´ај} 0:[«Trunc» «CS»] [[iz pto naimp]|dp]>								Des;		!guljáj- -> have a binge
+<{гъмж´а} 0:[«Trunc» «VS»] dp>											Des;		!gymžá- -> swarm
+<{гърмј´е} 0:[«Trunc» «VS»] [[[za|iz|po|pro]naimp]|dp]>								Des;		!gyrmjé- -> thunder
+
+<{дерз´ај} 0:[«Trunc» «CS»] dp>											Des;		!derzáj- -> strive boldly
+<{димј´е} 0:[«Trunc» «VS»] [[[za|na]pto naimp]|dp]>								Des;		!dimjé- -> smoke
+<{др´иска} 0:[«Trunc» «VS»] dp>											Des;		!dríska- -> have diarrhoea
+<{дрј´ема} 0:[«Trunc» «VS»] [[[do|za|na|o|po|fpo sza|pre|pri|u]naimp]|dp]>					Des;		!drjéma- -> doze
+<{д´уј} 0:[«Trunc» «CS»] [[[iz|na|po|raz]pto naimp]|dp]>							Des;		!dúj- -> pride
+<{дълж´а} 0:[«Trunc» «VS»] dp>											Des;		!dylžá- -> owe
+
+<{ехтј´е} 0:[«Trunc» «VS»] [[[za|iz|pro]naimp]|dp]>								Des;		!extjé- -> echo
+<{еч´а} 0:[«Trunc» «VS»] [[[iz|pro]naimp]|dp]>									Des;		!ečá- -> echo
+
+<{живј´еј} 0:[«Trunc» «CS»] [[[[[v|do|iz|nad|pre]pto]|za|na|o|ot|po]naimp]|dp]>					Des;		!živjéj- -> live
+<{жуж´а} 0:[«Trunc» «VS»] dp>											Des;		!žužá- -> buzz
+<{жумј´е} 0:[«Trunc» «VS»] [[za naimp]|dp]>									Des;		!žumjé- -> twinkle
+
+<{звуч´а} 0:[«Trunc» «VS»] [[[za|o|ot|pro]naimp]|dp]>								Des;		!zvučá- -> sound
+<{звънј´е} 0:[«Trunc» «VS»] [[[za|iz|po|pro]naimp]|dp]>								Des;		!zvynjé- -> ring
+<{звънтј´е} 0:[«Trunc» «VS»] [[[za|iz|po|pro]naimp]|dp]>							Des;		!zvyntjé- -> jangle
+<{з´еја} 0:[«Trunc» «VS»] [[pro naimp]|dp]>									Des;		!zéja- -> gape
+<{зн´ај} 0:[«Trunc» «CS»] [[[[[fza spo|fo spo|fo ssy|po|fpo sopo|pri|fraz spo|fraz su|u]pto]|sy]naimp]|dp]>	Des;		!znáj- -> know
+<{зрј´еј} 0:[«Trunc» «CS»] [[[do|na|fpo sna|pre|sy|u]naimp]|dp]>						Des;		!zrjéj- -> ripen
+<{з¶рј´е} 0:[«Trunc» «VS»] [[[v|pre|pro|sy]pto naimp]|dp]>							Des;		!z#rjé- -> look
+
+<{´ид} 0:«CS» [[[ot|fraz sot]naimp]|dp]>									Des;		!íd- -> go
+<{´јд} 0:«CS» [do|fpri sdo]naimp>										Des;		!´jd- -> come
+
+<{какан´иза} 0:[«Trunc» «VS»] dp>										Des;		!kakaníza- -> cluck
+<{к´апа} 0:[«Trunc» «VS»] [[[za|iz|po|fpo sna|fpo so|pri|pro|[[fiz spo|na|o|raz|s]pto]]naimp]|dp]>		Des;		!kápa- -> drop
+<{кас´ај} 0:[«Trunc» «CS»] dp>											Des;		!kasáj- -> concern
+<{к´ашлја} 0:[(«Trunc») «VS»] [[[za|iz|po|fpo sza|fpo siz|pro|raz]naimp]|dp]>					Des;		!kášlja- -> cough
+<{к´аја} 0:[«Trunc» «VS»] [[[[[o|raz]pto]|po]naimp]|dp]>							Des;		!kája- -> repent
+<{квич´а} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>									Des;		!kvičá- -> squeal
+<{кипј´е} 0:[«Trunc» «VS»] [[[za|iz|na|po|pre|pri]naimp]|dp]>							Des;		!kipjé- -> boil
+<{клеч´а} 0:[«Trunc» «VS»] [[za naimp]|dp]>									Des;		!klečá- -> squat
+<{колеб´ај} 0:[«Trunc» «CS»] [[[po|fpo sraz|raz]pto naimp]|dp]>							Des;		!kolebáj- -> oscillate
+<{крещј´е} 0:[«Trunc» «VS»] [[[za|[iz pto]|po|raz]naimp]|dp]>							Des;		!kreštjé- -> shriek
+<{кр´еја} 0:[«Trunc» «VS»] dp>											Des;		!kréja- -> languish
+<{к´ъкра} 0:[«Trunc» «VS»] [[za naimp]|dp]>									Des;		!kýkra- -> simmer
+<{кълн´а} 0:[«Trunc» «VS»] [[[za|[pro pto]]naimp]|dp]>								Des;		!kylná- -> curse
+<{кънтј´е} 0:[«Trunc» «VS»] [[[za|pro]naimp]|dp]>								Des;		!kyntjé- -> ring
+
+<{ламтј´е} 0:[«Trunc» «VS»] dp>											Des;		!lamtjé- -> crave
+<{л´аја} 0:[«Trunc» «VS»] [[[iz|[raz pto]]naimp]|dp]>								Des;		!lája- -> bark
+<{леж´а} 0:[«Trunc» «VS»] [[[za|[[fdo siz|iz]pto]|na|ot|po|pod|fpo siz|fpo sot|raz]naimp]|dp]>			Des;		!ležá- -> lie
+<{лел´еја} 0:[«Trunc» «VS»] [[po naimp]|dp]>									Des;		!leléja- -> cherish
+<{летј´е} 0:[«Trunc» «VS»] [[[v|do|za|iz|na|ot|po|pri|[[pre|pro|raz|fs spo]pto]]naimp]|dp]>			Des;		!letjé- -> fly
+<{лич´а} 0:[«Trunc» «VS»] [[[za|pro|raz]naimp]|dp]>								Des;		!ličá- -> be seen
+<{лјутј´е} 0:[«Trunc» «VS»] [[[za|na|[pod 0:«Exc3» pto]|pri|raz]naimp]|dp]>					Des;		!ljutjé- -> taste hot
+<{лъщј´е} 0:[«Trunc» «VS»] dp>											Des;		!lyštjé- -> shine
+
+<{м´аја} 0:[«Trunc» «VS»] [[[za|o|s]pto naimp]|dp]>								Des;		!mája- -> loiter
+<{миж´а} 0:[«Trunc» «VS»] [[[za|pre|pri]naimp]|dp]>								Des;		!mižá- -> blink
+<{мир´иса} 0:[«Trunc» «VS»] [[[[v pto]|za|iz|na|po|fpo sna|raz|u]naimp]|dp]>					Des;		!mirísa- -> smell
+<{млј´аска} 0:[«Trunc» «VS»] dp>										Des;		!mljáska- -> smack
+<{м´ожа} 0:[«Trunc» «VS»] dp>											Des;		!móža- -> be able
+<{муч´а} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>									Des;		!mučá- -> moo
+<{мъждј´е} 0:[«Trunc» «VS»] dp>											Des;		!myždjé- -> flicker
+<{мъждј´еј} 0:[«Trunc» «CS»] dp>										Des;		!myždjéj- -> flicker (variant)
+<{мълч´а} 0:[«Trunc» «VS»] [[[po|[[za|pre|s|u]pto]]naimp]|dp]>							Des;		!mylčá- -> be silent
+<{мја´ука} 0:[(«Trunc») «VS»] [[iz naimp]|dp]>									Des;		!mjaúka- -> mew
+<{м¶рј´е} 0:[«Trunc» «VS»] [[[za|iz|ot|pre|pri|u]naimp]|dp]>							Des;		!m#rjé- -> die
+
+<{нех´аја} 0:[«Trunc» «VS»] dp>											Des;		!nexája- -> take no heed
+<{нужд´ај} 0:[«Trunc» «CS»] dp>											Des;		!nuždáj- -> need
+<{нјем} [[[za|o]naimp]|dp]>											jej-suff;	!njem-jéj- -> grow mute
+
+<{пас´} 0:«CS» [[[[[iz|o]pto]|na|po]naimp]|dp]>									Des;		!pas´- -> graze
+<{пик´ај} 0:[«Trunc» «CS»] [[[na|po]pto naimp]|dp]>								Des;		!pikáj- -> piss
+<{пит´аја} 0:[«Trunc» «VS»] dp>											Des;		!pitája- -> foster
+<{пищј´е} 0:[«Trunc» «VS»] [[[za|iz|po|pro|raz]naimp]|dp]>							Des;		!pištjé- -> squeal
+<{пламтј´е} 0:[«Trunc» «VS»] [[raz pto naimp]|dp]>								Des;		!plamtjé- -> blaze
+<{пл´ака} 0:[«Trunc» «VS»] [[[do|za|na|[[iz|o|fpo so|raz]pto]|pri|pro]naimp]|dp]>				Des;		!pláka- -> cry
+<{пл´еска} 0:[«Trunc» «VS»] [[[iz|na]naimp]|dp]>								Des;		!pléska- -> talk nonsense
+<{пл´уј} 0:[«Trunc» «CS»] [[[raz|s]pto naimp]|dp]>								Des;		!plúj- -> rot
+<{плјущј´е} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>								Des;		!pljuštjé- -> flap
+<{плј´уј} 0:[«Trunc» «CS»] [[[[[za|iz|na|o]pto]|po]naimp]|dp]>							Des;		!pljúj- -> spit
+<{пращј´е} 0:[«Trunc» «VS»] [[[za|iz|na]naimp]|dp]>								Des;		!praštjé- -> crackle
+<{пръхтј´е} 0:[«Trunc» «VS»] [[iz naimp]|dp]>									Des;		!pryxtjé- -> snort
+<{пръщј´е} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>								Des;		!pryštjé- -> crackle
+<{пуфтј´е} 0:[«Trunc» «VS»] [[[za|iz|raz]naimp]|dp]>								Des;		!puftjé- -> puff
+<{пухтј´е} 0:[«Trunc» «VS»] [[[za|iz|raz]naimp]|dp]>								Des;		!puxtjé- -> puff
+<{пълзј´е} 0:[«Trunc» «VS»] [[[do|iz|po|[pre pto]|pri|pro|raz]naimp]|dp]>					Des;		!pylzjé- -> crawl
+<{п´ъпла} 0:[«Trunc» «VS»] [[[iz|na]naimp]|dp]>									Des;		!pýpla- -> creep
+<{пърдј´е} 0:[«Trunc» «VS»] [[iz pto naimp]|dp]>								Des;		!pyrdjé- -> fart
+<{пърполј´е} 0:[«Trunc» «VS»] dp>										Des;		!pyrpoljé- -> flutter
+<{пъхтј´е} 0:[«Trunc» «VS»] [[[za|raz]naimp]|dp]>								Des;		!pyxtjé- -> pant
+
+<[{раст´} 0:«CS»|{раст´} 0:{÷н°а} 0:[«Trunc» «VS»]] [[[do|za|iz|na|ob|ot|pod|fpo sna|fpo sot|fpo spo|pre|pri|pro|raz|s]naimp]|dp]> Des; !rast´-/rást-na- -> grow
+<{рев´а} 0:[«Trunc» «VS»] [[[za|iz|na|po|[raz pto]]naimp]|dp]>							Des;		!revá- -> cry
+<{рид´ај} 0:[«Trunc» «CS»] [[[za|[raz pto]]naimp]|dp]>								Des;		!ridáj- -> sob
+<{ропт´ај} 0:[«Trunc» «CS»] [[vyz naimp]|dp]>									Des;		!roptáj- -> grumble
+<{руч´а} 0:[«Trunc» «VS»] dp>											Des;		!ručá- -> rush
+<{ръмж´а} 0:[«Trunc» «VS»] [[[za|iz|po]naimp]|dp]>								Des;		!rymžá- -> growl
+<{рј´еј} 0:[«Trunc» «CS»] [[za naimp]|dp]>									Des;		!rjéj- -> roam
+<{рј´еја} 0:[«Trunc» «VS»] [[za naimp]|dp]>									Des;		!rjéja- -> roam (variant)
+
+<{с´а} 0:[«VS» «Exc5»] dp>											Des;		!s´a- -> be
+<{седј´е} 0:[«Trunc» «VS»] [[[do|za|[iz pto]|na|po|pre|u]naimp]|dp]>						Des;		!sedjé- -> sit
+<{сиј´ај} 0:[«Trunc» «CS»] [[[za|o|pro]naimp]|dp]>								Des;		!sijáj- -> shine
+<{скимтј´е} 0:[«Trunc» «VS»] [[[za|iz|po|pro]naimp]|dp]>							Des;		!skimtjé- -> whine
+<{скриптј´е} 0:[«Trunc» «VS»] [[[za|iz|pro]naimp]|dp]>								Des;		!skriptjé- -> grate
+<{скърбј´е} 0:[«Trunc» «VS»] [[[na|o]pto naimp]|dp]>								Des;		!skyrbjé- -> mourn
+<{сладнј´е} 0:[«Trunc» «VS»] dp>										Des;		!sladnjé- -> taste sweet
+<{слухтј´е} 0:[«Trunc» «VS»] [[za naimp]|dp]>									Des;		!sluxtjé- -> eavesdrop
+<{смърдј´е} 0:[«Trunc» «VS»] [[[[[v|raz]pto]|na]naimp]|dp]>							Des;		!smyrdjé- -> stink
+<{смј´еј} 0:[«Trunc» «CS»] [[[[[za|o]pto]|iz|na|nad|po|pri]naimp]|dp]>						Des;		!smjéj- -> laugh
+<{снов´а} 0:[«Trunc» «VS»] [[[za|[[o|fob so]pto]]naimp]|dp]>							Des;		!snová- -> hurry to and fro
+<{сп´а} 0:[«Trunc» «VS» «Exc2»] [[[do|za|na|ot|fpo sna|fpo sot|fpo su|pre|[[pri|u]pto]]naimp]|dp]>		Des;		!spá- -> sleep
+<{стој´а} 0:[«Trunc» «VS»] [[[[[na|ot]pto]|do|za|iz|po|fpo sza|pre|pred|sy|u]naimp]|dp]>			Des;		!stojá- -> stand
+<{сумтј´е} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>								Des;		!sumtjé- -> grunt
+<{сълзј´е} 0:[«Trunc» «VS»] dp>											Des;		!sylzjé- -> tear
+<{сълзј´и} 0:[«Trunc» «VS»] [[[na|pro]pto naimp]|dp]>								Des;		!sylzjí- -> tear (variant)
+<{сърбј´е} 0:[«Trunc» «VS»] [[[do|za|po]naimp]|dp]>								Des;		!syrbjé- -> itch
+
+<{теж´а} 0:[«Trunc» «VS»] [[[do|na]naimp]|dp]>									Des;		!težá- -> weigh
+<{тек´} 0:«CS» [[[do|za|iz|na|o|ot|po|fpo sot|pre|pri|pro|[raz pto]|s]naimp]|dp]>				Des;		!tek´- -> flow
+<{телефон} dp>													ira-suff;	!telefon-íra- -> telephone
+<{тлј´еј} 0:[«Trunc» «CS»] [[[do|za|iz]naimp]|dp]>								Des;		!tljéj- -> smoulder
+<{тр´аја} 0:[«Trunc» «VS»] [[[do|[[iz|s]pto]]naimp]|dp]>							Des;		!trája- -> endure
+<{треп´ера} 0:[«Trunc» «VS»] [[[za|po|[raz pto]]naimp]|dp]>							Des;		!trepéra- -> tremble
+<{трептј´е} 0:[«Trunc» «VS»] [[[za|po|[raz pto]]naimp]|dp]>							Des;		!treptjé- -> vibrate
+<{трещј´е} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>								Des;		!treštjé- -> crash
+<{трополј´е} 0:[«Trunc» «VS»] [[[iz|s]naimp]|dp]>								Des;		!tropoljé- -> clatter
+<{туптј´е} 0:[«Trunc» «VS»] [[[za|po|[raz pto]]naimp]|dp]>							Des;		!tuptjé- -> pulsate
+<{тъж´а} 0:[«Trunc» «VS»] dp>											Des;		!tyžá- -> grieve
+<{тънтј´е} 0:[«Trunc» «VS»] dp>											Des;		!tyntjé- -> rumble
+<{търч´а} 0:[«Trunc» «VS»] [[[do|za|iz|ot|pri]naimp]|s|dp]>							Des;		!tyrčá- -> run
+<{т´ътра} 0:[«Trunc» «VS»] [[[do|za|iz]naimp]|dp]>								Des;		!týtra- -> drag
+
+<{умј´еј} 0:[«Trunc» «CS»] [[[iz|pro|raz|fs sporaz|sy]naimp]|dp]>						Des;		!umjéj- -> know how
+
+<{фуч´а} 0:[«Trunc» «VS»] [[[za|iz|pre|pro|raz]naimp]|dp]>							Des;		!fučá- -> whizz
+<{ф´ъфла} 0:[«Trunc» «VS»] [[iz pto naimp]|dp]>									Des;		!fýfla- -> lisp
+
+<{хвърч´а} 0:[«Trunc» «VS»] [[[do|za|iz|ot|po|pod|pre|raz]naimp]|dp]>						Des;		!xvyrčá- -> fly
+<{хл´уј} 0:[«Trunc» «CS»] [[na naimp]|dp]>									Des;		!xlúj- -> gush
+<{хрущј´е} 0:[«Trunc» «VS»] [[iz naimp]|dp]>									Des;		!xruštjé- -> crunch
+<{х´ъхра} 0:[«Trunc» «VS»] dp>											Des;		!xýxra- -> wheeze
+
+<{царј´е} 0:[«Trunc» «VS»] dp>											Des;		!carjé- -> reign
+<{царј´и} 0:[«Trunc» «VS»] [[[vyz|za]naimp]|dp]>								Des;		!carjí- -> reign (variant)
+<{цвъртј´е} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>								Des;		!cvyrtjé- -> sizzle
+<{цвърч´а} 0:[«Trunc» «VS»] [[[za|iz]naimp]|dp]>								Des;		!cvyrčá- -> sizzle
+<{църтј´е} 0:[«Trunc» «VS»] dp>											Des;		!cyrtjé- -> chirp
+<{цъфтј´е} 0:[«Trunc» «VS»] [[[na|pre|pro|raz]naimp]|dp]>							Des;		!cyftjé- -> bloom
+<{ц´ъцра} 0:[«Trunc» «VS»] dp>											Des;		!cýcra- -> trickle
+
+<{шептј´е} 0:[«Trunc» «VS»] [[[za|po|[pro pto]|raz]naimp]|dp]>							Des;		!šeptjé- -> whisper
+<{шлј´ај} 0:[«Trunc» «CS»] [[za naimp]|dp]>									Des;		!šljáj- -> loaf (variant)
+<{шлј´аја} 0:[«Trunc» «VS»] [[za pto naimp]|dp]>								Des;		!šljája- -> loaf
+<{шумј´е} 0:[«Trunc» «VS»] [[[za|na|ot|raz]naimp]|dp]>								Des;		!šumjé- -> be noisy
+<{шумолј´е} 0:[«Trunc» «VS»] [[[za|iz|pro]naimp]|dp]>								Des;		!šumoljé- -> rustle
+<{шумтј´е} 0:[«Trunc» «VS»] [[[za|raz]naimp]|dp]>								Des;		!šumtjé- -> grunt
+<{шумулј´е} 0:[«Trunc» «VS»] [[[za|iz|pro]naimp]|dp]>								Des;		!šumuljé- -> rustle
+<{шуртј´е} 0:[«Trunc» «VS»] [[za naimp]|dp]>									Des;		!šurtjé- -> gush
+
+LEXICON TPfStems
+<{блјек´} 0:«CS» [o|fpre so|fraz ssy|sy]>									Des;		!-bljek´- -> dress
+<{валј´и} 0:[«Trunc» «VS»] [za|po|pre|pro|raz|s]>								Des;		!-valjí- -> rain (variant)
+<{вед´} 0:«CS» [v|do|za|iz|na|fob sza|ot|po|pod|pre|pri|pro|fpro siz|raz|s]>					Des;		!-ved´- -> lead
+<{венч´ај} 0:[«Trunc» «CS»] [[[raz|u]naimp]|dp]>								Des;		!venčáj- -> marry
+<{видј´е} 0:[«Trunc» «VS»] [[[do|za|na|pro]nto]|pred|pri|dp]>							Des;		!vidjé- -> see
+<{в´ърза} 0:[«Trunc» «VS»] [za|na|ob|ot|pod|pre|pri|raz|s|dp]>							Des;		!výrza- -> tie
+<{вј´еја} 0:[«Trunc» «VS»] [za|iz|ot|po|raz]>									Des;		!vjéja- -> blow (variant)
+<{горч´и} 0:[«Trunc» «VS»] [v|o|pod]>										Des;		!-gorčí- -> taste bitter (variant)
+<{дълж´и} 0:[«Trunc» «VS»] [za|iz|pro|u]>									Des;		!-dylží- -> owe (variant)
+<{´ем} 0:[«Trunc» «CS»] [za|na|po|pod|fpre sna|pri]>								Des;		!-ém- -> take (variant)
+<{з´ем} 0:[«Trunc» «CS»] [[v|fza sv|iz|fna sv|nad|fnad sv|ob|fpre sv|fsy sv]|dp]>				Des;		!zém- -> take
+<(и){зограф´} dp>												isa-suff;	!(i)zograf´-isa -> paint
+<{к´аза} 0:[«Trunc» «VS»] [do|fdo siz|fdo sraz|iz|na|o|ot|po|fpod ss|fpred ss|fpre sraz|raz|u|dp]>		Des;		!káza- -> say
+<{к´опча} 0:[«Trunc» «VS»] [v|iz|ot|s]>										Des;		!-kópča- -> clasp
+<{лич´и} 0:[«Trunc» «VS»] [za|iz|fiz sob|fo spri|ot|fraz sob|u]>						Des;		!-ličí- -> be seen (variant)
+<{н´ем} 0:[«Trunc» «CS»] [ot|fpre ss|s]>									Des;		!-ném- -> take (variant)
+<{п´аса} 0:[«Trunc» «VS»] [za|o|pre|raz]>									Des;		!-pása- -> gird
+<{помен´а} 0:[«Trunc» «VS»] [s|u]>										Des;		!-pomená- -> mention
+<{правд´ај} 0:[«Trunc» «CS»] o>											Des;		!-pravdáj- -> acquit
+<{прост¶рј´е} 0:[«Trunc» «VS»] [raz|dp]>									Des;		!prost#rjé- -> stretch
+<{п¶рј´е} 0:[«Trunc» «VS»] [vyz|do|za|na|o|pod|pri|s]>								Des;		!-p#rjé- -> touch
+<{рек´} 0:«CS» [v|za|iz|na|ob|ot|pred|dp]>									Des;		!rek´- -> say
+<{риц´ај} 0:[«Trunc» «CS»] [po|pro]>										Des;		!-ricáj- -> predict
+<{св´арји} 0:[«Trunc» «VS»] dp>											Des;		!svárji- -> encounter
+<{тъж´и} 0:[«Trunc» «VS»] [za|na|fpo sza|raz]>									Des;		!-tyží- -> grieve (variant)
+<{търв´а} 0:[«Trunc» «VS»] [iz|o|raz]>										Des;		!-tyrvá- -> drop
+<{отч´аја} 0:[«Trunc» «VS»] dp>											Des;		!otčája- -> dispirit
+<{´уј} 0:[«Trunc» «CS»] [iz|ob]>										Des;		!-új- -> put on/off
+<{ујдурд´иса} 0:[(«Trunc») «VS»] dp>										Des;		!ujdurdísa- -> concoct
+<{хар´иза} 0:[«Trunc» «VS»] dp>											Des;		!xaríza- -> give away
+<{чет´ај} 0:[«Trunc» «CS»] sy>											Des;		!-četáj- -> combine
+<{ч´уј} 0:[«Trunc» «CS»] [do|za|fpo sraz|pri|pro|raz|s|dp]>							Des;		!čúj- -> hear
+
+LEXICON TImpStems
+<{белј´еза} 0:[«Trunc» «VS» «Exc2»] [[[za|na|ot]naimp]|dp]>							Des;		!beljéza- -> note
+<{б´иј} 0:[«Trunc» «CS»] [[[v|do|za|iz|na|ot|po|pod|[fpo sot nto]|pre|fpri sdo|pro|raz|s|fs sdo|u]naimp]|dp]>	Des;		!bíj- -> beat
+<{бл´иза} 0:[«Trunc» «VS»] [[[iz|o|[po nto]]naimp]|dp]>								Des;		!blíza- -> lick
+<{бод´} 0:«CS» [[[za|iz|na|ot|pro|u]naimp]|dp]>									Des;		!bod´- -> gore
+<{б´ъхта} 0:[«Trunc» «VS»] [[na naimp]|dp]>									Des;		!býxta- -> beat
+<{б´ърса} 0:[«Trunc» «VS»] [[[iz|za|o|[fpo sza nto]]naimp]|dp]>							Des;		!býrsa- -> wipe
+<{б¶р´а} 0:[«Trunc» «VS»] [[[[[po|za|fpo sna|fpo ssy]nto]|do|iz|na|o|ot|pod|fpre siz|pri|pro|raz|s|sy]naimp]|dp]> Des;		!b#rá- -> take
+
+<{в´аја} 0:[«Trunc» «VS»] [[iz naimp]|dp]>									Des;		!vája- -> chisel
+<{вез´а} 0:[«Trunc» «VS» «Exc4»] dp>										Des;		!vezá- -> embroider
+<{велич´ај} 0:[«Trunc» «CS»] [[vyz naimp]|dp]>									Des;		!veličáj- -> extol
+<{вещ´ај} 0:[«Trunc» «CS»] [[[za|u]naimp]|dp]>									Des;		!veštáj- -> prophesy
+<{в´иј} 0:[«Trunc» «CS»] [[[za|iz|na|nad|ot|po|pre|pri|raz|s|u]naimp]|dp]>					Des;		!víj- -> wind
+<{владј´еј} 0:[«Trunc» «CS»] [[za naimp]|dp]>									Des;		!vladjéj- -> own
+<{влјек´} 0:«CS» [[[do|iz|na|ot|po|fpo su|pri|pro|raz|u]naimp]|dp]>						Des;		!vljek´- -> pull
+<{въртј´е} 0:[«Trunc» «VS»] [[[za|iz|na|ot|po|fpo sza|fpo sna|fpo sraz|pre|raz|[s nto]|u]naimp]|dp]>		Des;		!vyrtjé- -> revolve
+<{върш´а} 0:[«Trunc» «VS»] [[[iz|na|o|[po nto]]naimp]|dp]>							Des;		!vyršá- -> thresh
+<{върш´еј} 0:[«Trunc» «CS»] [[[iz|na|o|[po nto]]naimp]|dp]>							Des;		!vyršéj- -> thresh (variant)
+<{вј´еј} 0:[«Trunc» «CS»] [[[do|za|iz|na|ob|ot|po|raz]naimp]|dp]>						Des;		!vjéj- -> blow
+<{в¶рј´е} 0:[«Trunc» «VS»] [[[v|za|na|pro|s]naimp]|dp]>								Des;		!v#rjé- -> shove
+
+<{гл´еда} 0:«VS» [[[[[do|po|pro]nto]|v|za|iz|na|o|ot|pre|raz|s|sy]naimp]|dp]>					Des;		!gléda- -> watch
+<{гл´озга} 0:[«Trunc» «VS»] [[[[po nto]|iz|o]naimp]|dp]>							Des;		!glózga- -> gnaw
+<{горј´е} 0:[«Trunc» «VS»] [[[[[do|za|po|pre|raz]nto]|iz|na|ob|pro]naimp]|dp]>					Des;		!gorjé- -> burn
+<{градј´и} 0:[«Trunc» «VS»] [[[v|fvyz sna|za|iz|na|o|ob|pre|pri|raz|sy]naimp]|dp]>				Des;		!gradjí- -> build
+<{гриз´а} 0:[«Trunc» «VS» «Exc4»] [[[iz|na|o|pre|pro|s]naimp]|dp]>						Des;		!grizá- -> gnaw
+<{грј´еј} 0:[«Trunc» «CS»] [[[za|[[iz|po|fpo sza|fpo sna]nto]|na|o|pod|pre|raz|s]naimp]|dp]>			Des;		!grjéj- -> give warmth
+<{гълч´а} 0:[«Trunc» «VS»] [[[na|s]naimp]|dp]>									Des;		!gylčá- -> scold
+
+<{дад´} 0:«CS» [[[v|za|iz|na|[[nad|pri|u]nto]|ot|po|pre|fpre siz|fpre spo|fpre spro|pro|raz|fraz spro]naimp]|dp]> Des;		!dad´- -> give
+<{др´аска} 0:[«Trunc» «VS»] [[[za|iz|fiz spo|na|o|fpo siz|[po nto]]naimp]|dp]>					Des;		!dráska- -> scratch
+<{душ´а} 0:[«Trunc» «VS»] dp>											Des;		!dušá- -> choke
+<{душ´и} 0:[«Trunc» «VS»] [[[za|iz|s|u]naimp]|dp]>								Des;		!duší- -> choke (variant)
+<{д´ъвка} 0:[(«Trunc») «VS»] [[[pre|s]naimp]|dp]>								Des;		!dývka- -> chew
+<{дълб´ај} 0:[«Trunc» «CS»] [[[v|za|iz]naimp]|dp]>								Des;		!dylbáj- -> chisel
+<{държ´а} 0:[«Trunc» «VS»] [[[vyz|za|iz|po|pod|fpo sza|s|u]naimp]|dp]>						Des;		!dyržá- -> hold
+<{д¶р´а} 0:[«Trunc» «VS»] [[[[za nto]|iz|fiz spo|na|o|pro|raz|sy]naimp]|dp]>					Des;		!d#rá- -> flay
+
+<{жел´ај} 0:[«Trunc» «CS»] [[po naimp]|dp]>									Des;		!želáj- -> wish
+<{ж´ъна} 0:[«Trunc» «VS»] [[[do|iz|nad|o|[[za|po]nto]]naimp]|dp]>						Des;		!žýna- -> reap
+
+<{зов´а} 0:[«Trunc» «VS»] [[[na|ot|[[o|po]nto]|pri]naimp]|dp]>							Des;		!zová- -> call
+
+<{игр´ај} 0:[«Trunc» «CS»] [[[[[po|fpo sob|fpo sraz]nto]|do|za|iz|na|nad|ob|ot|pod|pre|pro|raz]naimp]|dp]>	Des;		!igráj- -> play
+
+<{клад´} 0:«CS» dp>												Des;		!klad´- -> make a fire
+<{кл´епа} 0:[«Trunc» «VS»] [[iz naimp]|dp]>									Des;		!klépa- -> hammer
+<{ков´а} 0:[«Trunc» «VS»] [[[v|do|za|iz|na|o|ob|ot|[po nto]|pod|pri|raz|s]naimp]|dp]>				Des;		!ková- -> forge
+<{к´олји} 0:[«Trunc» «VS»] [[[za|iz|na nto]naimp]|dp]>								Des;		!kólji- -> slaughter
+<{коп´ај} 0:[«Trunc» «CS»] [[[[[po|na]nto]|v|do|za|iz|o|ot|pod|pre|pro|raz|s]naimp]|dp]>			Des;		!kopáj- -> dig
+<{крад´} 0:«CS» [[[o|ot|po|fpo sot]naimp]|dp]>									Des;		!krad´- -> steal
+<{кр´иј} 0:[«Trunc» «CS»] [[[fdo sraz|za|ot|po|pri|raz|s|u]naimp]|dp]>						Des;		!kríj- -> hide
+<{кълв´а} 0:[«Trunc» «VS»] [[[na|[po nto]]naimp]|dp]>								Des;		!kylvá- -> peck
+<{к´ъпа} 0:[«Trunc» «VS»] [[[iz|o|fpo siz]naimp]|dp]>								Des;		!kýpa- -> give a bath
+
+<{ласк´ај} 0:[«Trunc» «CS»] [[[po|pri]naimp]|dp]>								Des;		!laskáj- -> flatter
+<{л´ъга} 0:[«Trunc» «VS»] [[[za|iz|nad|[[po|fpo ss|pre|s]nto]|pod|pri]naimp]|dp]>				Des;		!lýga- -> lie
+<{лј´еј} 0:[«Trunc» «CS»] [[[v|do|za|na|ob|ot|po|pod|pre|pri|pro|raz|s]naimp]|dp]>				Des;		!ljéj- -> pour
+
+<{м´аза} 0:[«Trunc» «VS»] [[[za|iz|na|o|po|[pod nto]|fpo sza|fpo sna|pre|raz|s]naimp]|dp]>			Des;		!máza- -> spread
+<{мет´} 0:«CS» [[[do|[[za|po|fpo siz]nto]|iz|fna ss|o|pod|pre|s]naimp]|dp]>					Des;		!met´- -> sweep
+<{мечт´ај} 0:[«Trunc» «CS»] [[[za|raz|[na nto]]naimp]|dp]>							Des;		!mečtáj- -> dream
+<{м´иј} 0:[«Trunc» «CS»] [[[[[za|pod]nto]|iz|ot|fpo siz|pre|pro|s|u]naimp]|dp]>					Des;		!míj- -> wash
+<{мот´ај} 0:[«Trunc» «CS»] [[[za|iz|na|o|ot|fpo sna|raz|s]naimp]|dp]>						Des;		!motáj- -> wind
+<{мълвј´е} 0:[«Trunc» «VS»] [[pro naimp]|dp]>									Des;		!mylvjé- -> utter
+<{м´ъмра} 0:[«Trunc» «VS»] [[s naimp]|dp]>									Des;		!mýmra- -> scold
+<{м´¶лје} 0:[«Trunc» «VS»] [[[do|po|pre|s]naimp]|dp]>								Des;		!m´#lje- -> mill
+
+<{нес´} 0:«CS» [[[v|vyz|do|za|iz|na|ot|po|pod|pre|pri|fpro siz|raz|s|u]naimp]|dp]>				Des;		!nes´- -> carry
+<{н´иза} 0:[«Trunc» «VS»] [[[[za nto]|iz|na|pro|raz]naimp]|dp]>							Des;		!níza- -> thread
+
+<{ор´а} 0:[«Trunc» «VS»] [[[[[za|po]nto]|iz|fpo siz|pre|raz]naimp]|dp]>						Des;		!orá- -> plow
+
+<{пек´} 0:«CS» [[[do|za|iz|na|o|fpo so|pod|pre|s|[[po|pri]nto]]naimp]|dp]>					Des;		!pek´- -> bake
+<{п´иса} 0:[«Trunc» «VS»] [[[[[po|pro|fpo sna|fpo so]nto]|v|do|za|iz|na|nad|o|ot|pod|pre|pred|fpre sza|pri|fpri spod|raz|s]naimp]|dp]> Des; !písa- -> write
+<{п´иј} 0:[«Trunc» «CS»] [[[v|do|[[fdo siz|za|ot|fpo sna|fpo sot|fpo spre|pre|pri|u]nto]|iz|na|nad|o|po|pro]naimp]|dp]> Des;	!píj- -> drink
+<{п´орји} 0:[«Trunc» «VS»] [[[za|fo ss|ot|raz|s]naimp]|dp]>							Des;		!pórji- -> rip
+<{п´оска} 0:[«Trunc» «VS»] [[o naimp]|dp]>									Des;		!póska- -> look for lice
+<{плет´} 0:«CS» [[[v|do|za|iz|[na nto]|pre|raz|s|u]naimp]|dp]>							Des;		!plet´- -> knit
+<{пред´} 0:«CS» [[[[za nto]|iz|o]naimp]|dp]>									Des;		!pred´- -> spin
+<{пј´еј} 0:[«Trunc» «CS»] [[[[[na|po|pri|fpre sus|pro|raz|fu ss]nto]|vyz|do|za|iz|nad|o]naimp]|dp]>		Des;		!pjéj- -> sing
+<{п¶р´а} 0:[«Trunc» «VS»] [[[[za nto]|iz|o|pre]naimp]|dp]>							Des;		!p#rá- -> wash
+
+<{р´еса} 0:[«Trunc» «VS» «Exc2»] [[[iz|raz|s]naimp]|dp]>							Des;		!résa- -> comb
+<{р´иј} 0:[«Trunc» «CS»] [[[za|iz|[[na|s]nto]|ot|pod|raz]naimp]|dp]>						Des;		!ríj- -> dig
+<{руг´ај} 0:[«Trunc» «CS»] [[[[[za|iz]nto]|na|po]naimp]|dp]>							Des;		!rugáj- -> revile
+<{руш´и} 0:[«Trunc» «VS»] [[[na|raz]naimp]|dp]>									Des;		!ruší- -> destroy
+<{рј´еза} 0:[«Trunc» «VS»] [[[v|za|iz|na|o|ob|ot|po|pod|fpo sna|fpo so|fpo spod|pre|pro|raz|s]naimp]|dp]>	Des;		!rjéza- -> cut
+
+<{с´ипа} 0:[«Trunc» «VS»] [[[do|za|iz|na|ob|ot|po|[[fpo sna|pri]nto]|pre|raz|sy]naimp]|dp]>			Des;		!sípa- -> shower
+<{сјек´} 0:«CS» [[[za|iz|na|po|pod|pre|raz|sy]naimp]|dp]>							Des;		!sjek´- -> cut
+<{сј´еј} 0:[«Trunc» «CS»] [[[v|za|na|o|ot|po|pre]naimp]|dp]>							Des;		!sjéj- -> sow
+<{сј´еја} 0:[«Trunc» «VS»] [[[za|na|o|pre|raz]naimp]|dp]>							Des;		!sjéja- -> sow (variant)
+<{ск´уба} 0:[«Trunc» «VS»] [[[iz|na|o|ot|pro]naimp]|dp]>							Des;		!skúba- -> pluck
+<{см´ука} 0:[(«Trunc») «VS»] [[[v|iz|pro]naimp]|dp]>								Des;		!smúka- -> suck
+<{стр´ига} 0:[«Trunc» «VS»] [[[do|iz|o|pod|fpo so]naimp]|dp]>							Des;		!stríga- -> shear
+<{строј´и} 0:[«Trunc» «VS»] [[[v|do|za|nad|po|pre|fpre su|pri|u]naimp]|dp]>					Des;		!strojí- -> build
+<{ст´ърга} 0:[(«Trunc») «VS»] [[[iz|na|o|[[fpo so|pre]nto]]naimp]|dp]>						Des;		!stýrga- -> scrape
+<{ст´¶ла} 0:[«Trunc» «VS»] [[[za|na|po|raz]naimp]|dp]>								Des;		!st´#la- -> cover
+<{с´ука} 0:[(«Trunc») «VS»] [[[za|na|u]naimp]|dp]>								Des;		!súka- -> suck, twist
+
+<{твърдј´е} 0:[«Trunc» «VS»] [[[v|za|po|u]0:«Exc3» naimp]|dp]>							Des;		!tvyrdjé- -> assert
+<{терз´ај} 0:[«Trunc» «CS»] [[iz naimp]|dp]>									Des;		!terzáj- -> torment
+<{тр´епа} 0:[«Trunc» «VS»] [[[iz|pre|u]naimp]|dp]>								Des;		!trépa- -> bash in the head
+<{трес´} 0:«CS» [[[za|po|raz]naimp]|dp]>									Des;		!tres´- -> shake
+<{тр´иј} 0:[«Trunc» «CS»] [[[v|za|iz|na|[[o|po|fpo sna]nto]|pre|pro|raz|s]naimp]|dp]>				Des;		!tríj- -> rub
+<{тък´а} 0:[«Trunc» «VS»] [[[[[za|po]nto]|v|iz|raz]naimp]|dp]>							Des;		!tyká- -> weave
+<{тъкмј´е} 0:[«Trunc» «VS»] dp>											Des;		!tykmjé- -> prepare
+<{тъкмј´и} 0:[«Trunc» «VS»] [[[do|[za nto]|na|pri|s]naimp]|dp]>							Des;		!tykmjí- -> prepare (variant)
+<{т´ъпка} 0:[(«Trunc») «VS»] [[[[[za|po|fpo sraz|raz]nto]|iz|na|pre|s|u]naimp]|dp]>				Des;		!týpka- -> tread on
+<{търпј´е} 0:[«Trunc» «VS»] [[[[[po|s]nto]|iz|pre]naimp]|dp]>							Des;		!tyrpjé- -> endure
+
+<{х´апа} 0:[«Trunc» «VS»] [[[za|iz|na|ot|pre|u]naimp]|dp]>							Des;		!xápa- -> bite
+
+<{ч´ака} 0:«VS» [[[[[za|po]nto]|do|iz|pri]naimp]|dp]>								Des;		!čáka- -> wait
+<{черт´ај} 0:[«Trunc» «CS»] [[[za|na|o|pod|fpred sna|raz]naimp]|dp]>						Des;		!čertáj- -> draw
+<{ч´еса} 0:[«Trunc» «VS»] [[[v|na|[[za|po]nto]|pri|raz|s]naimp]|dp]>						Des;		!čésa- -> scratch
+<{чет´} 0:«CS» [[[[po nto]|do|za|iz|na|ot|fpred spo|pro|raz|s]naimp]|dp]>					Des;		!čet´- -> read
+
+<{ш´иј} 0:[«Trunc» «CS»] [[[v|za|iz|ob|ot|pod|pri|raz|sy|u]naimp]|dp]>						Des;		!šíj- -> sew
+
+<{щ´ипа} 0:[«Trunc» «VS»] [[[za|iz|o|ot|pre|pri|u]naimp]|dp]>							Des;		!štípa- -> pinch
+
+<{јад´} 0:«CS» [[[do|fdo siz|[[za|nad|o|pod|fpo spre]nto]|iz|fiz spo|na|pre|pro|raz|u]naimp]|dp]>		Des;		!jad´- -> eat
+
+LEXICON NTDerStems
+<{блестј} za>													ava-suff;	!blestj-áva- -> shine
+<{болј} [za|ot|po|fpo sna|fpo spri|pre|pri|raz]>								ava-suff;	!bolj-áva- -> hurt
+<{бој} po>													ava-suff;	!boj-áva- -> fear
+<{бръмч} [za|iz|po]>												ava-suff;	!brymč-áva- -> buzz
+<{бумтј} [za|iz|po|pro|raz]>											ava-suff;	!bumtj-áva- -> roar
+<{бухтј} iz>													ava-suff;	!buxtj-áva- -> thunder
+<{буч} [za|iz]>													ava-suff;	!buč-áva- -> rumble
+<{б´ъбрј} [iz|na|po|raz]>											a-suff;		!býbrj-a- -> chatter
+<{валј} [iz|na|fpo sna|fpo spre|za|po|pre]>									ava-suff;	!valj-áva- -> rain
+<{висј} [iz|na|po]>												ava-suff;	!visj-áva- -> hang
+<{врещј} [za|iz|po]>												ava-suff;	!vreštj-áva- -> bleat
+<{интерес} [[[za|fpo sza]pto]|po|dp]>										uva-suff;	!interes-úva- -> take interest
+
+LEXICON TDerStems
+<{б´и} [v|do|za|iz|na|ot|po|pod|[fpo sot nto]|pre|fpri sdo|pro|raz|s|fs sdo|u]>					va-suff;	!-bí-va- -> beat
+<{б´ир} [[[po|za|fpo sna|fpo ssy]nto]|do|iz|na|o|ot|pod|fpre siz|pri|pro|raz|s|sy]>				a-suff;		!-bír-a- -> take
+<{бл´из} [iz|o|[po nto]|dp]>											va-suff;	!blíz-va- -> lick
+<{божд´} [za|iz|na|ot|pro|u]>											a-suff;		!-božd´-a- -> gore
+<{б´ърс} [iz|za|o|[fpo sza nto]]>										va-suff;	!-býrs-va- -> wipe
+<{б´ъхт} na>													va-suff;	!-býxt-va- -> beat
+<{в´алј} [za|po|pre|pro|raz|s]>											a-suff;		!-valj´-a- -> rain (variant)
+<{в´ир} [v|za|na|pro|s]>											a-suff;		!-vír-a- -> shove
+<{вонј} [v|za|raz|u]>												ava-suff;	!-vonj-áva- -> stench
+<{д´иг} [v|vyz|za|iz|na|po|fpo sv|fpri spo|raz]>								na-suff;	!-díg-na -> raise
+<{п´ис} [[[po|pro|fpo sna|fpo so]nto]|v|do|za|iz|na|nad|o|ot|pod|pre|pred|fpre sza|pri|fpri spod|raz|s]>	va-suff;	!-pís-va- -> write (prefixed)
+<{пл´ащ} [[[do|fdo siz|na|raz]nto]|za|iz|nad|ot|pred|dp]>							a-suff;		!plášt-a- -> pay
+<{хладј} [[[za|fpo sza|fpo so|fpo sraz]nto]|o|pro|raz]>								ava-suff;	!-xladj-áva- -> cool
+<{ч´ак} [[[za|po]nto]|do|iz|o|pri]>										va-suff;	!-čák-va -> wait
+
+LEXICON jej-suff
+<0:÷ {ј´еј} 0:[«Trunc» «CS»]>	Des;
+
+LEXICON ira-suff
+<0:÷ {´ира} 0:«VS»>		Des;
+
+LEXICON isa-suff
+<0:÷ {иса} 0:«VS»>		Des;
+
+LEXICON uva-suff
+<0:÷ {´ува} 0:«VS» paimp>	Des;
+
+LEXICON ava-suff
+<0:÷ {´ава} 0:«VS» paimp>	Des;
+
+LEXICON va-suff
+<0:÷ {ва} 0:«VS» paimp>		Des;
+
+LEXICON a-suff
+<0:÷ а 0:«VS» paimp>		Des;
+
+LEXICON na-suff
+<0:÷ {на} 0:[«Trunc» «VS»] naimp> Des;
+
+LEXICON Des
+0:÷÷				DesTypes;
+
+LEXICON DesTypes
+<«NPast»>			NPastNT;
+<«Imp»>				ImperfectNT;
+<«Imper» 0:и>			ImperativeT;
+<«Ger» 0:{ејки} raimp>		#;
+<«Aor»>				AoristNT;
+<«Pass» «Part» 0:{¬ен÷} rto>	PartT;
+<«VSubst» 0:{¬ен÷} «Sg» 0:е raimp> #;
+
+LEXICON NPastNT
+<0:{и÷}>			NPastT;
+<«Part» 0:{ещ÷} raimp>		PartT;
+
+LEXICON ImperfectNT
+<0:{ех÷}>			ImperfectT;
+<«Part» 0:{ел÷}>		PartT;
+
+LEXICON AoristNT
+<0:{¬ох÷}>			AoristT;
+<«Part» 0:{л÷}>			PartT;
+
+LEXICON NPastT
+<«1P» «Sg» 0:ъ>			#;
+<«2P» «Sg» 0:ш>			#;
+<«3P» «Sg» 0:ø>			#;
+<«1P» «Pl» 0:м>			#;
+<«2P» «Pl» 0:{т°е}>		#;
+<«3P» «Pl» 0:{ът}>		#;
+
+LEXICON ImperfectT
+<«1P» «Sg» 0:ø> 		#;
+<[«2P»|«3P»] «Sg» 0:е>		#;
+<«1P» «Pl» 0:{м°е}>		#;
+<«2P» «Pl» 0:{т°е}>		#;
+<«3P» «Pl» 0:{°а}>		#;
+
+LEXICON AoristT
+<[«1P»|«2P»|«3P»] «Sg» 0:ø>	#;
+<«1P» «Pl» 0:{м°е}>		#;
+<«2P» «Pl» 0:{т°е}>		#;
+<«3P» «Pl» 0:{°а}>		#;
+
+LEXICON PartT
+<«m» «Sg» 0:ø>			#;
+<«f» «Sg» 0:а>			#;
+<«n» «Sg» 0:о>			#;
+<«Pl» 0:и>			#;
+
+LEXICON ImperativeT
+<«Sg»>				#;
+<0:{÷т°е} «Pl»>			#;

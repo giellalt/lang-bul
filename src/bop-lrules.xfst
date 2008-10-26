@@ -1,0 +1,91 @@
+!bop-lrules.xfst
+
+define C [б|в|г|д|ж|з|ј|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ];
+define VelarC [г|к|х];
+define HardC [б|в|д|з|м|н|п|р|с|т|ф|ц];
+define PalC [ж|ч|ш];
+define PalCj [PalC|ј];
+define VelC [к|г|х];
+define DentC д|з|н|с|т|ц;
+define VoiC [б|г|д|з|ж];
+define UVoiC [п|ф|к|т|с|ш|х|ц|ч];
+
+define V [а|е|и|о|у|ъ|¶|ю|я];
+define AcuteV [е|и];
+
+define 0PrefixExtention [..] -> ъ || .#. «Pref» в _ ÷ [в|ф|[(´) о]|[п C [V - AcuteV]]];
+define 0ConsClustConstr [д|т] -> [] || C _ ÷ DentC;
+define 0CjEAlt е -> а || [C - [г|к|ф]] ј ´ _ [C - PalCj] [~$[V|ј] [V - AcuteV]], [C - [г|к|ф]] ј ´ _ х C, [C - [г|к|ф]] ј (´) _ .#.;
+
+define 1AStemTrunc V -> [] || _ «Trunc» «VS» M* ÷ ÷ $NPS ~$¬ .#.,, [ј|м] -> [] || _ «Trunc» «CS» M* ÷ ÷ $[AS - «VSubst»];
+define 1BDesTrunc V -> [] || .#. ~$«Trunc» «VS» [M - «Exc5»]* ÷ ÷ [M|÷]* (¬) _, «VS» [M - «Exc5»]* ÷ ÷ [[M|÷] - «VSubst»]* ¬ _, «Trunc» «CS» M* ÷ ÷ [[M|÷] - «VSubst»]* ¬ _;
+define 1CVelarAlt г -> ж, к -> ч, х -> ш || _ (´) M* ÷ (÷) M* (¬) (´) AcuteV;
+define 1DStressAlt [?* ´:0 M* ÷ ÷ [M|÷|C]* (¬) [C|´]* 0:´ V ?*|?* 0:´ V C* ´:0 M* ÷ (÷) [M|÷]* ((¬) C* ° V ?*)|?* ´:0 ¶ [\V]* 0:´ V ?*|~$[´ ¶ | ´ [÷ [\V]+ ?*|M*] ÷ ÷]];
+
+define 3A1aStemAlt1 [..] -> ј || ´ V C* [л|р|п|б|т|м] _ а «Trunc» «VS» $NPS,, з -> ж, [з[г|д]] -> {ждј}, [с|х] -> ш, {ск} -> {щј} || ´ V C* _ а «Trunc» «VS» $NPS;
+define 3A1aStemAlt2 г -> ж, к -> ч || ´ V C* _ а «Trunc» «VS» $NPS;
+define 3A1bZeroStemAlt ¶ -> е || _ ~${рј} «Trunc» $NPS,, {рј} -> р, л -> {лј} || ¶ C* _ (´ V) M* ÷ ÷ $NPS;
+define 3A2aNTDesFilter и -> е || [«CS»|¶|[[C - PalCj] (´) а «Trunc» «VS»]|[ј а «Trunc» «VS»]] ~$«Exc2» «NPast» _ ÷;
+define 3A2aNTDesDrop V -> [] || «NPast» _ ÷ M* V [V|C|´|°]* .#.;
+define 3A2bTDesExt ъ -> м, м -> {ме} || .#. ~$«Trunc» «VS» $«NPast» «1P» M* _;
+define 3B1Palat [..] -> ј || HardC _ (´) [«Trunc»|«CS»] $«Imp» ~$[[«2P»|«3P»] «Sg»] .#.;
+define 3B2EAlt е -> а || PalCj M* ÷ ÷ [M* & $«Imp»] ´ _ ~$[[«2P»|«3P»] «Sg»] .#.;
+define 3C1StressAlt [?* ´:0 ?* «Imper» 0:´ V ?*|~$[«Imper» V]];
+define 3C2aSgDesAlt и -> ј || .#. [~$«Trunc» & $«VS»] «Imper» _,, и -> [] || .#. $[\C ј (´) M* ÷ ÷] «Imper» _, $«Exc1» «Imper» _;
+define 3C2cPlDesAlt и -> е || «Imper» _ ÷;
+define 3D1Palat [..] -> ј || HardC _ (´) [«Trunc»|«CS»] $[«NPast» «Part» (´) а];
+define 3D2DesAlt е -> а || ´ M* ÷ ÷ «NPast» «Part»  _;
+
+define 4A1StressAlt [?* 0:´ V C* ´:0 [[M* & $«CS»]|[V ?* «Exc4»]] ÷ ÷ AS ?* .P. ~$[\´ V C* ´ [[M* & $«CS»]|[V ?* «Exc4»]] ÷ ÷ AS]];
+define 4A1EAlt е -> а || PalCj ´ _ «Trunc» M* ÷ ÷ [AS - «VSubst»] M* (¬) [\V]* [[V|ø] - и] ?* .#.;
+define 4A2HashAlt ø -> е || .#. ~$«Trunc» «CS» $AS [«2P»|«3P»] «Sg» _;
+define 4A2RestrictOX {¬ох÷} -> [] || $AS _ [«2P»|«3P»] «Sg»;
+define 4B1StemTrunc [д|т] -> [] || _ M* ÷ ÷ [M* & $[«Aor» «Part»]];
+define 4B1LAlt [..] -> ъ || [C - [д|т]] (д|т|´) M* ÷ ÷ [M* & $[«Aor» «Part»]] _ л ÷ M* «m»;
+define 4C1StemTrunc и -> [] || _ M* ÷ ÷ $«Pass»,, ¬ -> [] || и M* ÷ ÷ ?* «Pass» «Part» _;
+define 4C1DePalat ј -> [] || C _ ´ «Trunc» $«Pass»;
+define 4C2DesSel1 {¬ен} -> т || н (´) а M* ÷ ÷ «Pass» «Part» _, .#. [[$.V & ~$«Pref»]|«Pref» [C|V]* ÷ [$.V & ~$[C {ј´еј}]]] «Trunc» «CS» M* ÷ ÷ «Pass» «Part» _;
+define 4C2DesSel2 {¬ен} (->) т || .#. [[$.V & ~$«Pref»]|«Pref» [C|V]* ÷ [$.V & $[C {ј´еј}]]] «Trunc» «CS» M* ÷ ÷ «Pass» «Part» _;
+define 4D1StemTrunc1 и -> [], [н (°) а] -> н, {н´а} -> {н´}, {ја} -> ј, {ј´а} -> {ј´} || _ M* «Trunc» «VS» M* ÷ ÷ $«VSubst»;
+define 4D1StemTrunc2 а (->) [] || [VelarC|PalC] ´ _ M* «Trunc» «VS» M* ÷ ÷ $«VSubst»;
+define 4D1StemAlt ј -> [] || _ ´ V $«Exc3» ÷ ÷ $«Pass»;
+define 4D1DesTrunc V -> [] || V «Trunc» «VS» M* ÷ ÷ «VSubst» ¬ _;
+define 4D1StressAlt [$¶ ´:0 $«VSubst» [«Sg»|«Pl»] 0:´ ?*|~$[$¶ ´ $«VSubst» [«Sg»|«Pl»] \´]];
+define 4D1ZeroStemAlt ¶ -> е || ´ _ $«VSubst»,, V -> [] || $[´ ¶] _ M* $«VSubst»;
+
+define remstress [´|°] -> [];
+define repstress [?* 0:´ V ÷ ´:0 ј C ?*|~$[´ ј C]];
+define stress [?* 0:´ ј ´:0 [а|е|и|у] ?*|~$[ј ´ [а|е|и|у]]];
+define finalschwa ъ -> а || _ .#., $«3P» _ т .#.;
+define plus ÷ -> [];
+define hash [¶|ø] -> [];
+define star ¬ -> [];
+define mark M -> [];
+define pal {ја} -> я, {ју} -> ю, {је} -> е, {ји} -> и;
+define jj ј -> й || V _,, ј -> ь || C _;
+define assim [{дз} -> ц, {дж} -> ч || _ [UVoiC|.#.]] .o. [б -> п, в -> ф, г -> к, д -> т, з -> с, ж -> ш || _ [UVoiC|.#.]] .o. [ц -> {дз}, ч -> {дж} || _ VoiC] .o.  [п -> б, ф -> в, к -> г, т -> д, с -> з, ш -> ж || _ VoiC];
+
+define Ortho	finalschwa .o.
+		mark .o.
+		repstress .o.
+		plus .o.
+		hash .o.
+		star .o.
+		stress .o.
+		pal .o.
+		jj .o.
+		remstress .o.
+		?*;
+
+define Phono	?* .o.
+		mark .o.
+		repstress .o.
+		plus .o.
+		hash .o.
+		star .o.
+		[щ -> [ш т], ° -> []] .o.
+		[ј -> [] || \VelC _ (´) [е|и]] .o.
+		[[..] -> ј || VelC _ [е|и]] .o.
+		assim .o.
+		IPA .o.
+		?*;
