@@ -1,0 +1,97 @@
+!b
+
+clear;
+undefine ALL;
+source bop-translit.xfst
+source bop-ipa.xfst
+source bop-urules.xfst
+source bop-lrules.xfst
+read lexc bop.lexc
+eliminate flag Prefix;
+eliminate flag SecPrefix;
+eliminate flag Asp;
+eliminate flag Trans;
+define Lexicon;
+define Rules [ustress.i .o.
+	Trans.i .o.
+	Lexicon .o.
+	[{държ´а} -> [{дръж´} «Exc1»] || _ M+ ÷ ÷ $«Imper»] .o.									!dyrží -> drýž
+	[{јад´} -> [{јаж´} «Exc1»] || _ M+ ÷ ÷ $«Imper»] .o.									!jadí -> jáž
+	[{видј´е} -> [{виж´} «Exc1»] || _ M+ ÷ ÷ $«Imper»] .o.									!vidí -> víž
+	[{видј´е} -> {в´идје} || _ M+ ÷ ÷ $«NPast»] .o.										!vidjá -> vídja
+	[[..] -> «Exc1» || {÷лј´ез} _ M+ ÷ ÷ $«Imper»] .o.									!vlezí -> vléz
+	[[«Trunc» -> [] || ´ ?* [{зг}|{ск}] а _ «VS» $NPS]|[[..] -> «Exc2» || ´ ?* [{зг}|{ск}] а «Trunc» «VS» _ $NPS]] .o.	![zg|sk]«Trunc» -> [«NTrunc»|«Exc2»]
+	[а -> и || {душ´} _ M+ ÷ ÷ $[«Pass»|«VSubst»]] .o.									!dušá -> duší
+	[[[{кълн´а} «Trunc»] -> {кл´е} || _ $«Aor»]|[~$[{кълн´а} ?* «Aor» «Part»]]] .o.						!kylnáx -> kléx
+	[о (->) [] || [[\C ÷]|.#.] з _ {в´а} M+ ÷ ÷ $«Pass»] .o.								!zová (->) zvá
+	[е -> а || {рј´} _ {за} M+ ÷ ÷ $AS] .o.											!rjéza -> rjáza
+	[[{ад´} «CS»] -> [{´а} «VS»] || [.#.|÷] [д|ј] _ [$«NPast» & $[«1P» «Sg»]]] .o.						![d|j]adá -> [d|j]ám
+	[[{ад´} «CS»] -> [{´а} «VS»] || [.#.|÷] д _ $«Imper»] .o.								!dadí -> dáj
+	[[ј «Trunc» «CS»] (->) «VS» || .#. {зн´а} _ [$«NPast» & $[«1P» «Sg»]]] .o.						!znája (->) znám
+	[[..] -> ј || [.#.|÷] {сп} _ {´а} M+ ÷ ÷ $NPS] .o.									!spá -> spjá
+	[ј -> [] || .#. щ _ {´а} M+ ÷ ÷ $«NPast»] .o.										!štjá -> štá
+	[{к´олји} (->) {к¶л´а} || _ M+ ÷ ÷ $AS] .o.										!kólix (->) kláx
+	[{кълн´а} (->) {к¶л´е} || _ M+ ÷ ÷ $«Aor»] .o.										!kylná (->) kléx
+	[{п´орји} (->) {п¶р´а} || [{от}|{раз}] ÷ _ M+ ÷ ÷ $AS] .o.								!-pórix (->) -práx
+	[[{м´ожа} «Trunc» «VS»] -> [{м´ог} «CS»] || _ $«NPast»] .o.								!móžam -> móga
+	[[{м´ожа} «Trunc» «VS»] (->) [{мог´} «CS»] || _ $[«Aor» «Part»]] .o.							!móžel (->) mogýl
+	[{б´ъд} -> {бид´} || .#. _ M+ ÷ ÷ $[«Aor»|«Ger»]] .o.									!býl -> bíl
+	[{б´ъд} (->) {бј´} || .#. _ M+ ÷ ÷ [$«Imp» & ~$«Part»] .#.] .o.								!býdeše (->) béše
+	[{б´ъд} -> [?-?] || .#. _ M+ ÷ ÷ $«VSubst»] .o.										!býdene -> ø
+	[{ех} (->) [] || .#. б ј ´ $[÷ ÷ «Imp»] _ $[[«2P»|«3P»]«Sg»]] .o.							!béše (->) bé
+	[{с´а} -> [?-?] || .#. _ M+ ÷ ÷ [~$«NPast»|$«Part»] .#.] .o.								!sá- has only NPast forms
+	[а -> ъ || .#. с ´ _ M+ ÷ ÷ $[«1P» «Sg»]] .o.										!sým
+	[[а «VS»] -> [«VS»] || .#. {с´} _ $[[«1P»|«2P»]«Pl»|[«2P»|«3P»]«Sg»]] .o.						!smé
+	[и -> [] || .#. {с´} (а) M+ ÷ ÷ M* _ $[«Pl»|«3P»]] .o.									!sí
+	[?* -> [] || .#. {с´} (а) M+ ÷ ÷ M* $[«2P» «Sg»|«3P» «Pl»] _] .o.							!sá
+	[° -> [] || .#. {с´} M+ ÷ ÷ $[«2P» «Pl»] т _ е] .o.									!sté
+	[{с´} -> {´е} || .#. _ M+ ÷ ÷ $[«3P» «Sg»]] .o.										!é
+	[{´ид} -> [?-?] || .#. ~$«Pref» _ M+ ÷ ÷ $[«Aor» «Part»]] .o.								!íd- has no non-Pref Aor Part
+	[{´ид} -> {´иш} || $«Pref» _ M+ ÷ ÷ $[«Aor» «Part»]] .o.								!-íd- -> -íš- in Pref Aor Part
+	[{до÷´јд} -> [{ел´а} «Exc1»] || «Pref» _ M+ ÷ ÷ $«Imper»] .o.								!dojdí -> elá
+	[{´јд} -> {јд´} || $«Pref» _ M+ ÷ ÷ $«Aor»] .o.										!dójdox -> dojdóx
+	[{јд´} -> {ш´} || $«Pref» _ M+ ÷ ÷ $[«Aor» «Part»]] .o.									!-´jd- -> -š´- in Pref Aor Part
+	0PrefixExtention .o.
+	3A1bZeroStemAlt .o.
+	3A2aNTDesFilter .o.
+	3A1aStemAlt1 .o.
+	3A1aStemAlt2 .o.
+	4D1ZeroStemAlt .o.
+	4C2DesSel1 .o.
+	4C2DesSel2 .o.
+	4C1StemTrunc .o.
+	4D1StemTrunc1 .o.
+	4D1StemTrunc2 .o.
+	4D1DesTrunc .o.
+	1AStemTrunc .o.
+	3A2aNTDesDrop .o.
+	3A2bTDesExt .o.
+	3C2aSgDesAlt .o.
+	3C2cPlDesAlt .o.
+	3C1StressAlt .o.
+	4A2RestrictOX .o.
+	4A2HashAlt .o.
+	1CVelarAlt .o.
+	3D2DesAlt .o.
+	1BDesTrunc .o.
+	3B1Palat .o.
+	3D1Palat .o.
+	4C1DePalat .o.
+	4A1StressAlt .o.
+	4D1StemAlt .o.
+	4D1StressAlt .o.
+	4B1LAlt .o.
+	1DStressAlt .o.
+	4A1EAlt .o.
+	4B1StemTrunc .o.
+	3B2EAlt .o.
+	0CjEAlt .o.
+	0ConsClustConstr .o.
+	?*];
+
+read regex Rules .o. [Phono|Ortho];
+!read regex Rules .o. Phono;
+!read regex Rules .o. Ortho;
+!push defined Rules;
+
+sort net;

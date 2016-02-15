@@ -1,0 +1,71 @@
+#!/usr/local/bin/perl -w
+
+use strict;
+use utf8;
+
+my ($act, $up) = @ARGV;
+
+my %words;
+
+print "Generating command...\n";
+open (FH1, ">z")
+  or die "Could not open z: $!";
+print FH1 "sou b";
+for (my $i = 0; $i < ($act ? 3000 : 20000); $i++) {
+  print FH1 "\nrandom-".($up ? "u" : "l")." 500";
+}
+my $com = "xfst -utf8 -e 'sou z' -stop";
+
+print "Running command...\n$com\n";
+
+open (FH1, "-|:utf8", $com)
+  or die "Could not run xfst: $!";
+my $j = 0;
+while (my $word = <FH1>) {
+  chomp $word;
+  $words{$word}++;
+  $j++ unless ($word =~ /Kb./ || $word =~ /ing/ || $word =~ /\.\.\./ || $word =~ /defined/);
+}
+close (FH1)
+  or die "xfst problem: $? $!";
+
+print "Writing output".($act ? "" : " 1")."...\n";
+
+my $filename = $act ? "w.new.".($up ? "u" : "l") : "e.txt";
+open (FH1, ">:utf8", $filename)
+  or die "Could not open $filename: $!";
+my $i = 0;
+foreach (sort(keys %words)) {
+  unless (/Kb./ || /ing/ || /\.\.\./ || /defined/) {
+    $i++;
+    print FH1 "$_";
+    print FH1 "\t".(length($_) < 8 ? "\t" : "")."-> $words{$_}\t-> ".(($words{$_}/$j)*100)."% of all tokens" unless $act;
+    print FH1 "\n";
+  }
+}
+print FH1 "Total number of tokens: $j\t\tTotal number of distinct tokens: $i\n" unless $act;
+
+unless ($act) {
+  print "Writing output 2...\n";
+  $filename = "f.txt";
+  open (FH1, ">:utf8", $filename)
+    or die "Could not open $filename: $!";
+  my $i = 0;
+  foreach (sort {$words{$a} <=> $words{$b}} (keys %words)) {
+    unless (/Kb./ || /ing/ || /\.\.\./ || /defined/) {
+      $i++;
+      print FH1 "$_";
+      print FH1 "\t".(length($_) < 8 ? "\t" : "")."-> $words{$_}\t-> ".(($words{$_}/$j)*100)."% of all tokens" unless $act;
+      print FH1 "\n";
+    }
+  }
+  print FH1 "Total number of tokens: $j\t\tTotal number of distinct tokens: $i\n" unless $act;
+}
+
+close FH1;
+
+if ($act) {
+  $com = "xfst -utf8 -e 'sou b' -e '".($up ? "down" : "up")." <w.new.".($up ? "u" : "l")."' -stop >w.new.".($up ? "u" : "l").".ana; diff -y --suppress-common-lines w.new.".($up ? "u" : "l").".ana words.txt.".($up ? "u" : "l").".ana >diff.".($up ? "u" : "l");
+  print "Running command...\n$com\n";
+  system $com;
+}
