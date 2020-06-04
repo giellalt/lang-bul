@@ -1,0 +1,9 @@
+name = "Bulgarian"
+version = "0.1.0"
+
+[macos]
+system_pkg_id = "no.divvun.MacDivvun.bg"
+
+[windows]
+system_product_code = "6882FFC7-EF8B-4537-9373-9CFF82360412"
+msoffice_product_code = "48C4C3F8-C80B-45AE-B3DB-4E0C25A9AA48"
