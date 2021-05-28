@@ -605,29 +605,32 @@ These were the set types.
 
 
 
-Nouns
-Nouns in the Bulgarian language are things.
-
-
-Numerals
-Numerals in the Bulgarian language are numbers.
-
-
-Verbs
-Verbs in the Bulgarian language are actions.
-
-
-Prefixes
-Prefixes in the Bulgarian language are bound to beginning of other words.
+Verb inflection
+The Bulgarian language verbs inflect in persons.
 
 
 
-Adjectives
-Adjectives in the Bulgarian language describe things.
+Proper noun inflection
+The Bulgarian language proper nouns inflect in the same cases as regular
+nouns, but with a colon (':') as separator.
 
 
-Pronouns
-Pronouns in the Bulgarian language are references to things.
+
+Adjective inflection
+The Bulgarian language adjectives compare.
+
+
+
+Noun inflection
+The Bulgarian language nouns inflect in cases.
+
+
+
+
+# Symbol affixes
+
+
+
 
 
 =================================== !
@@ -653,32 +656,29 @@ The Bulgarian morphophonological/twolc rules file !
 * examples:*
 
 * examples:*
-
-# Symbol affixes
-
-
+Verbs
+Verbs in the Bulgarian language are actions.
 
 
-
-Noun inflection
-The Bulgarian language nouns inflect in cases.
-
+Pronouns
+Pronouns in the Bulgarian language are references to things.
 
 
-Proper noun inflection
-The Bulgarian language proper nouns inflect in the same cases as regular
-nouns, but with a colon (':') as separator.
+Numerals
+Numerals in the Bulgarian language are numbers.
 
 
+Adjectives
+Adjectives in the Bulgarian language describe things.
 
-Verb inflection
-The Bulgarian language verbs inflect in persons.
+
+Prefixes
+Prefixes in the Bulgarian language are bound to beginning of other words.
 
 
 
-Adjective inflection
-The Bulgarian language adjectives compare.
-
+Nouns
+Nouns in the Bulgarian language are things.
 
 
 
@@ -764,22 +764,6 @@ word classes, or optionally from prefixes:
 
 
 
-We describe here how abbreviations are in Bulgarian are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
- * s.:syntynyt # ;  
- * os.:omaa% sukua # ;  
- * v.:vuosi # ;  
- * v.:vuonna # ;  
- * esim.:esimerkki # ; 
- * esim.:esimerkiksi # ; 
-
-
-
-
-
 
 
 
@@ -830,6 +814,22 @@ For example:
 % kolon% :%:     Root ;
 % sárggis% :%-   Root ; 
 % násti% :%*     Root ; 
+
+
+
+
+We describe here how abbreviations are in Bulgarian are read out, e.g.
+for text-to-speech systems.
+
+For example:
+
+ * s.:syntynyt # ;  
+ * os.:omaa% sukua # ;  
+ * v.:vuosi # ;  
+ * v.:vuonna # ;  
+ * esim.:esimerkki # ; 
+ * esim.:esimerkiksi # ; 
+
 
 
       [ L A N G U A G E ]  G R A M M A R   C H E C K E R
