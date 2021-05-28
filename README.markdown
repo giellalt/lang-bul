@@ -3,13 +3,13 @@ The Bulgarian morphology and tools
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-bul)](https://github.com/giellalt/lang-bul/issues)
 [![Build Status](https://github.com/giellalt/lang-bul/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-bul/actions)
-[![License](https://img.shields.io/github/license/giellalt/lang-bul)](https://raw.githubusercontent.com/giellalt/lang-bul/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-bul)](https://raw.githubusercontent.com/giellalt/lang-bul/main/LICENSE)
 
 This repository contains finite state source files for the Bulgarian language,
 for building morphological analysers, proofing tools
 and dictionaries. The data and implementation are licenced under __LICENCE__
 licence, also detailed in the
-[LICENCE](https://github.com/giellalt/lang-bul/blob/develop/LICENCE). The
+[LICENSE](https://github.com/giellalt/lang-bul/blob/main/LICENSE). The
 authors named in the AUTHORS file are available to grant other licencing
 choices.
 
@@ -77,7 +77,7 @@ svn checkout https://github.com/giellalt/lang-bul.git/trunk lang-bul
 Building and installation
 -------------------------
 
-[INSTALL](https://github.com/giellalt/lang-bul/blob/develop/INSTALL)
+[INSTALL](https://github.com/giellalt/lang-bul/blob/main/INSTALL)
 describes the GNU build system in detail, but for most users it is the usual:
 
 ```sh
