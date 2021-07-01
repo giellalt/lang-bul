@@ -78,3 +78,5 @@ given the proper use of these flags.
 The word forms in Bulgarian language start from the lexeme roots of basic
 word classes, or optionally from prefixes:
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-bul/blob/main/../src/fst/root.lexc)</small>
