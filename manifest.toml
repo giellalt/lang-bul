@@ -1,5 +1,5 @@
-name = "Bulgarian"
-version = "0.1.1"
+spellername = "Bulgarian"
+spellerversion = "0.1.1"
 
 # Name of the speller package in various languages.
 # The default is English + autonym:
