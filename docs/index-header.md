@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/github/license/giellalt/lang-bul)](https://github.com/giellalt/lang-bul/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-bul)](https://github.com/giellalt/lang-bul/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-bul?label=CI)](https://builds.giellalt.org/pipelines/lang-bul/builds/latest)
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/bulg1262)
 
 This page documents the work on the [Bulgarian language model](https://github.com/giellalt/lang-bul). 
 
