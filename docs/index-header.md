@@ -1,11 +1,19 @@
 # Bulgarian documentation
 
+<div class="twocolumn map" markdown="1">
+
 [![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-bul%2Fgh-pages%2Fmaturity.json)](https://giellalt.github.io/MaturityClassification.html)
 ![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-bul%2Fgh-pages%2Flemmacount.json)
 [![License](https://img.shields.io/github/license/giellalt/lang-bul)](https://github.com/giellalt/lang-bul/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-bul)](https://github.com/giellalt/lang-bul/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-bul?label=CI)](https://builds.giellalt.org/pipelines/lang-bul/builds/latest)
 [![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/bulg1262)
+
+{% include_relative language-map.md %}
+
+Center location data taken from [Glottolog](https://glottolog.org/). Area extent is local data. Both can be adjusted if wrong - file a pull request!
+
+</div>
 
 This page documents the work on the [Bulgarian language model](https://github.com/giellalt/lang-bul). 
 
