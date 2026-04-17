@@ -1,12 +1,12 @@
 The Bulgarian morphology and tools
 ==========================================
 
-[![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-bul%2Fgh-pages%2Fbadgedata%2Ffst-maturity.json)](https://giellalt.github.io/MaturityClassification.html)
-![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-bul%2Fgh-pages%2Fbadgedata%2Ffst-lemmacount.json)
+[![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-bul%2Fmain%2Fdocs%2Fbadgedata%2Ffst-maturity.json)](https://giellalt.github.io/MaturityClassification.html)
+![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-bul%2Fmain%2Fdocs%2Fbadgedata%2Ffst-lemmacount.json)
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-bul)](https://github.com/giellalt/lang-bul/issues)
 [![License](https://img.shields.io/github/license/giellalt/lang-bul)](https://github.com/giellalt/lang-bul/blob/main/LICENSE)
-[![Doc Build Status](https://github.com/giellalt/lang-bul/workflows/Docs/badge.svg)](https://github.com/giellalt/lang-bul/actions)
-[![CI/CD Build Status](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-bul/main/badge.svg)](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-bul/main/latest)
+[![Doc build](https://img.shields.io/github/actions/workflow/status/giellalt/lang-bul/docs.yml?logo=github&label=DocCI)](https://github.com/giellalt/lang-bul/actions/workflows/docs.yml)
+[![Build Status](https://builds.giellalt.org/api/badge/lang-bul?logo=buildkite&label=CoreCI)](https://builds.giellalt.org/pipelines/lang-bul/builds/latest)
 
 Download nightly / CI/CD installation packages for testing (contains the core zhfst file(s)):
 
